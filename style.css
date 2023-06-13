@@ -1,0 +1,109 @@
+/* 設置盒子模型 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 設置字體大小和字體 */
+html, body {
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+/* 設置背景和布局 */
+body {
+  background: #10131c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 設置輸入框的樣式 */
+input {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* 設置按鈕的樣式 */
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* 設置計算機容器的樣式 */
+.calculator {
+  background: #212532;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .75rem;
+  width: 325px;
+  border: 1px solid #333;
+  padding: .75rem;
+  border-radius: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 設置顯示屏的樣式 */
+.screen {
+  grid-column: 1 / 5;
+  border-radius: .75rem;
+  font-size: 2rem;
+  height: 6rem;
+  color: #fff;
+  background: #333849;
+  text-align: end;
+  padding: .5rem;
+}
+
+/* 設置輸入框預設文字的顏色 */
+::placeholder {
+  color: #0ff;
+}
+
+/* 設置符號按鈕和數字按鈕的樣式 */
+.symbol, .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1;
+  font-size: 1.25rem;
+  color: #0ff;
+  border-radius: 50%;
+  transition: .15s ease;
+}
+
+/* 設置符號按鈕的顏色、背景和滑鼠懸停時的背景 */
+.symbol {
+  background: #5d68e2;
+}
+
+.symbol:hover {
+  background: #4d55b1;
+}
+
+/* 設置數字按鈕的背景和滑鼠懸停時的背景 */
+.number {
+  background: #333849;
+}
+
+.number:hover {
+  background: #333849ac;
+}
